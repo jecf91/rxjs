@@ -1,3 +1,9 @@
+export interface ITask {
+  id: string;
+  description: string;
+  isDone: boolean;
+}
+
 export enum Gender {
   Female = "female",
   Hermaphrodite = "hermaphrodite",
