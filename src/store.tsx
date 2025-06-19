@@ -18,14 +18,15 @@ import { getPersons } from "./services/person";
 // });
 
 //SHOTER VERSIONS:
-//with defer getPersons() is only called at the moment it is subscribed
+//with defer getPersons() it's "Lazy" is only called at the moment it is subscribed
 export const rawPersons$ = defer(() => getPersons());
 //with from the promisse getPersons() called immediately
 //export const rawPersons$ = from(getPersons());
 
-//COMBINED OBSERVABLES:
+//DERIVED STATE:
 export const selectedPersons$ = new BehaviorSubject<string[]>([]);
 
+//To derive state we use the combineLatest Function
 export const mergedPersons$ = combineLatest([
   rawPersons$,
   selectedPersons$,
