@@ -8,12 +8,19 @@ export const useGetPersonFromFetch = () => {
   const [persons, setPersons] = useState<Person[]>([]);
 
   useEffect(() => {
+    //fromFetch Uses the Fetch API to make an HTTP request and returns an Observable.
     const subscription = fromFetch("https://swapi.info/api/people")
+      //PIPE is method that receives a list of operators and returns a new obsvervable
+      //it executes the operators sequentially.
       .pipe(
+        //concatMap is a operator that allows you to transform
+        // and transfers it to the next operator in the sequence
         concatMap((response) => {
           if (response.ok) {
             return response.json();
           } else {
+            //of returns Observable that synchronously emits
+            // the arguments and then immediately completes.
             return of({ results: [] });
           }
         })

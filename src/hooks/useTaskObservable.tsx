@@ -1,6 +1,12 @@
 import { BehaviorSubject } from "rxjs";
 import { ITask } from "../models";
 
+//The most important concept in RxJS is the Observable,
+//which is an object that can emit values at any time, with subscribers following updates.
+//There is a convention of suffixing observables with a $ sign,
+//RxJS’s BehaviorSubject is a stateful observable
+//stateful observables emit an event every time the value changes.
+//And all subscribers see the same events at the same time
 const tasksSubject$ = new BehaviorSubject<ITask[]>([]);
 
 export const useTasksObservable = () => {

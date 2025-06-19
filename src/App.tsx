@@ -1,9 +1,9 @@
+import DoneTasks from "./pages/DoneTasks";
+import TaskStateCrud from "./pages/TaskStateCrud";
 //import PersonFromFetch from "./pages/PersonFromFetch";
 //import PersonFromGlobalStore from "./pages/PersonFromGlobalStore";
 //import MergedDataFromGlobalStore from "./pages/MergedDataFromGlobalStore";
-
-import DoneTasks from "./pages/DoneTasks";
-import TaskStateCrud from "./pages/TaskStateCrud";
+// import AngularWay from "./pages/AngularWay";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       {/* <PersonFromFetch /> */}
       {/* <PersonFromGlobalStore /> */}
       {/* <MergedDataFromGlobalStore /> */}
+      {/* <AngularWay /> */}
     </main>
   );
 }
