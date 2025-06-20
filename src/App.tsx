@@ -3,7 +3,7 @@ import TaskStateCrud from "./pages/TaskStateCrud";
 //import PersonFromFetch from "./pages/PersonFromFetch";
 //import PersonFromGlobalStore from "./pages/PersonFromGlobalStore";
 //import MergedDataFromGlobalStore from "./pages/MergedDataFromGlobalStore";
-// import AngularWay from "./pages/AngularWay";
+//import BehaviorSubjectWay from "./pages/BehaviorSubjectWay";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       {/* <PersonFromFetch /> */}
       {/* <PersonFromGlobalStore /> */}
       {/* <MergedDataFromGlobalStore /> */}
-      {/* <AngularWay /> */}
+      {/* <BehaviorSubjectWay /> */}
     </main>
   );
 }

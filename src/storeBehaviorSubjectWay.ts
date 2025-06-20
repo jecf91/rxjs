@@ -17,7 +17,7 @@ const initialState: PersonState = {
 class PersonStore {
   private state$ = new BehaviorSubject<PersonState>(initialState);
 
-  getState() {
+  getObservable() {
     return this.state$.asObservable();
   }
 
@@ -36,7 +36,7 @@ class PersonStore {
         }),
         catchError((err) => {
           this.setState({
-            error: err.message || "Erro desconhecido",
+            error: err.message || "Something went wrong...",
             loading: false,
             data: [],
           });
@@ -51,4 +51,4 @@ class PersonStore {
   }
 }
 
-export const personStoreAngular = new PersonStore();
+export const BehaviorSubjectStore = new PersonStore();
